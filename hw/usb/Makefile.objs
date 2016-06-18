@@ -42,3 +42,6 @@ common-obj-y += $(patsubst %,host-%.o,$(HOST_USB))
 ifeq ($(CONFIG_USB_LIBUSB),y)
 common-obj-$(CONFIG_XEN_BACKEND) += xen-usb.o
 endif
+
+# usb device adapters
+common-obj-$(CONFIG_USB_VDCI) += dcd-vdci.o
